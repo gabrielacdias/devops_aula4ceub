@@ -1,7 +1,7 @@
 {
   "name": "aula-ci-github-actions",
   "version": "1.0.0",
-  "description": "Projeto base para aula prática de CI e Testes Automatizados",
+  "description": "Projeto base para aula pratica de CI e Testes Automatizados",
   "main": "src/calculadora.js",
   "scripts": {
     "lint": "eslint src/",
