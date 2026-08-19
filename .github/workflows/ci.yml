@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Baixar código do repositório
+    - name: Baixar codigo do repositorio
       uses: actions/checkout@v4
 
     - name: Configurar Node.js
@@ -19,11 +19,14 @@ jobs:
       with:
         node-version: '20'
 
-    - name: Instalar dependências do projeto
-      run: npm install
+    - name: Instalar dependencias do projeto
+      run: npm ci
 
-    # ETAPA 1: ANÁLISE ESTÁTICA DE CÓDIGO (LINTER)
-    - name: Executar análise estática de código (Linter)
+    - name: Ajustar permissoes dos executaveis
+      run: chmod -R +x node_modules/.bin
+
+    # ETAPA 1: ANALISE ESTATICA DE CODIGO (LINTER)
+    - name: Executar analise estatica de codigo (Linter)
       run: npm run lint
 
     # ETAPA 2: TESTES AUTOMATIZADOS
